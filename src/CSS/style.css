@@ -1,0 +1,182 @@
+body{
+    display: grid;
+    grid-template-areas: "header header header header"
+                          "hero hero hero hero"
+                          "nav nav nav nav";
+    grid-template-columns: repeat(4,1fr); 
+    font-family: 'Inter', sans-serif;                             
+}
+
+
+.hero{
+    grid-area: hero;
+    display: flex;
+    gap: 5px;
+}
+
+.hero .home img{
+    width: 100%;
+    height: 50%;
+    margin-bottom: 20px ;
+}
+
+
+.hero .home{
+    padding: 20px;
+    width: 60%;
+}
+
+.hero .home .info{
+    display: flex;
+    gap: 20px;
+}
+.hero .home .info .title{
+    font-weight: 800;
+    font-size: 35px;
+    margin-right: 20px;
+}
+
+.hero .home .info .description p{
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 2;
+    color: hsl(236, 13%, 42%);
+}
+
+.hero .home .info .description .btn{
+    background-color: hsl(5, 85%, 63%);
+    padding: 15px 25px;
+    color: hsl(36, 100%, 99%);
+}
+
+.hero .home .info .description .btn:hover{
+    background-color: hsl(240, 100%, 5%);
+
+}
+.hero .new{
+    width: 40%;
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+    margin-top: 15px;
+}
+
+.hero .new h2{
+    color: hsl(35, 77%, 62%);
+    font-size: 40px;
+    padding: 10px 15px;
+    font: 700;
+    margin-bottom: 15px;
+}
+
+.hero .new a{
+    color: hsl(36, 100%, 99%);
+}
+
+.hero .new a:hover{
+    color: hsl(35, 77%, 62%);
+}
+
+
+.hero .new .notice{
+    border-bottom: solid 2px hsl(233, 8%, 79%);
+    margin-bottom: 80px;
+    padding: 0px 15px; 
+}
+
+.hero .new .notice p{
+    margin:  15px 0px;
+}
+
+
+.hero .new .notice.last{
+    border-style: none;
+}
+
+
+
+.nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.nav .popular{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.nav .popular img{
+    width: 30%;
+    height: 100%;
+    padding: 5px;
+    
+}
+
+.nav .popular .description{
+    padding: 15px;
+    float: right;
+
+}
+
+.nav .popular .description h2{
+    color: hsl(236, 13%, 42%);
+}
+
+.nav .popular .description a{
+    font-size: 18px;
+    color: black;
+    font-weight: 800;
+}
+
+.nav .popular .description a:hover{
+    color:hsl(5, 85%, 63%);
+
+} 
+
+.nav .popular .description p{
+    color: hsl(236, 13%, 42%);
+    line-height: 2;
+}
+
+
+@media(max-width: 768px){
+
+    body{
+        grid-template-columns: 1fr;
+    }
+    
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero .home{
+        width: 100%;
+        height: 50%;
+    }
+
+    
+    .hero .new{
+        width: 100%;
+    }
+
+    .hero .home .info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero .home img{
+        height: auto;
+    }
+}
+
